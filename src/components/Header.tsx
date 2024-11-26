@@ -36,19 +36,19 @@ const Header: React.FC = () => {
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex space-x-8">
-                    <a href="#home" className="text-base text-gray-800 hover:text-[#FF735C]">
+                    <a href="#home" className="font-medium text-gray-600 hover:text-[#FF735C]">
                         Home
                     </a>
-                    <a href="#whyus" className="text-base text-gray-800 hover:text-[#FF735C]">
+                    <a href="#whyus" className="font-medium text-gray-600 hover:text-[#FF735C]">
                         Why Us
                     </a>
-                    <a href="#howitworks" className="text-base text-gray-800 hover:text-[#FF735C]">
+                    <a href="#howitworks" className="font-medium text-gray-600 hover:text-[#FF735C]">
                         How It Works
                     </a>
-                    <a href="#reviews" className="text-base text-gray-800 hover:text-[#FF735C]">
+                    <a href="#reviews" className="font-medium text-gray-600 hover:text-[#FF735C]">
                         Reviews
                     </a>
-                    <a href="#account" className="text-base text-[#FF735C]">
+                    <a href="#account" className="font-medium text-[#FF735C]">
                         My Account
                     </a>
                 </div>
@@ -131,10 +131,9 @@ const Header: React.FC = () => {
             <div id="home" className="flex flex-col md:flex-row items-center justify-between px-4 md:px-12 py-1 mt-20">
                 {/* Left Content */}
                 <div className="max-w-xl text-center md:text-left">
-                    <p className="text-3xl md:text-4xl text-gray-800">
-                        Build Resumes That Land Jobs with{" "}
-                        <span className="text-[#FF735C]">AI-Powered</span> Precision
-                    </p>
+                    <h2 className="text-4xl md:text-4xl font-bold text-gray-600">
+                        Build Resumes That Land Jobs with{" "}<span className="text-[#FF735C] md:text-5xl">AI-Powered</span> Precision
+                    </h2>
                     <p className="text-base mt-2 text-gray-600">
                         Create ATS-friendly, customizable resumes tailored to your dream
                         job—all in minutes.

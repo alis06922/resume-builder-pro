@@ -10,7 +10,7 @@ import fbIcon from '../assets/fb.svg'
 import twitterIcon from '../assets/twitter.svg'
 import linkedInIcon from '../assets/linkedin.svg'
 import Header from '../components/Header'
-import Review from '../components/Reviews'
+import Testimonials from '../components/Rveiews'
 
 
 const HomePage = () => {
@@ -21,7 +21,12 @@ const HomePage = () => {
 
             {/* Features Section */}
             <section id='whyus' className="px-6 py-16">
-                <h2 className="text-3xl font-light text-center mb-6">Why Choose Us?</h2>
+                <div className="text-center mb-12">
+                    <h2 className="text-4xl md:text-4xl font-bold mb-5 text-gray-600">
+                        Why Choose Us?
+                    </h2>
+                </div>
+                {/* <h2 className="text-6xl font-bold text-center mb-5 text-gray-600">Why Choose Us?</h2> */}
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                     <div className="flex items-start space-x-4">
                         <span className="bg-gray-100 rounded p-4 items-center justify-center">
@@ -65,7 +70,11 @@ const HomePage = () => {
 
             {/* How It Works Section */}
             <section id='howitworks' className="px-6 py-16 bg-white">
-                <h2 className="text-3xl font-light text-center mb-6">How It Works</h2>
+                <div className="text-center mb-12">
+                    <h2 className="text-4xl md:text-4xl font-bold mb-5 text-gray-600">
+                        How It Works
+                    </h2>
+                </div>
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                     <div className="flex flex-col items-center text-center">
                         <img
@@ -107,11 +116,11 @@ const HomePage = () => {
             </section>
 
             {/* Testimonials Section */}
-            <Review />
+            <Testimonials />
 
 
             {/* Footer */}
-            <footer className="py-6 text-center bg-gray-100">
+            <footer className="px-6 py-6 text-center bg-gray-100">
                 <p className="flex justify-center items-center space-x-4 mb-4">
                     <img src={linkedInIcon} alt="LinkedIn" className="w-6 h-6" />
                     <img src={fbIcon} alt="Facebook" className="w-6 h-6" />
