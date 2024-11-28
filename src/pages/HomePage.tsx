@@ -1,14 +1,14 @@
+import { Link } from 'react-router-dom'
 import botIcon from '../assets/ai-bot.svg'
-import searchIcon from '../assets/search.svg'
 import documentIcon from '../assets/document.svg'
-import customStyleIcon from '../assets/vector.svg'
+import backgroundHomeImage from "../assets/home-main.svg"
 import how1 from '../assets/how-1.svg'
 import how2 from '../assets/how-2.svg'
 import how3 from '../assets/how-3.svg'
 import how4 from '../assets/how-4.svg'
-import fbIcon from '../assets/fb.svg'
-import twitterIcon from '../assets/twitter.svg'
-import linkedInIcon from '../assets/linkedin.svg'
+import searchIcon from '../assets/search.svg'
+import customStyleIcon from '../assets/vector.svg'
+import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Testimonials from '../components/Rveiews'
 
@@ -19,6 +19,31 @@ const HomePage = () => {
             {/* Hero Section */}
             <Header />
 
+            {/* Content Section */}
+            <div id="home" className="flex flex-col md:flex-row items-center justify-between px-4 md:px-12 py-1 mt-20">
+                {/* Left Content */}
+                <div className="max-w-xl text-center md:text-left">
+                    <h2 className="text-4xl md:text-4xl font-bold text-gray-600">
+                        Build Resumes That Land Jobs with{" "}<span className="text-primary md:text-5xl">AI-Powered</span> Precision
+                    </h2>
+                    <p className="text-base mt-2 my-4 text-gray-600">
+                        Create ATS-friendly, customizable resumes tailored to your dream
+                        job—all in minutes.
+                    </p>
+                    <Link to="/signup/" className="mt-6 px-6 py-3 bg-primary text-white font-medium rounded-lg">
+                        Get Started for Free Today!
+                    </Link>
+                </div>
+
+                {/* Right Image */}
+                <div className="w-full md:w-1/2 mt-6 md:mt-0">
+                    <img
+                        src={backgroundHomeImage}
+                        alt="Resume Builder"
+                        className="w-full h-auto object-cover"
+                    />
+                </div>
+            </div>
             {/* Features Section */}
             <section id='whyus' className="px-6 py-16">
                 <div className="text-center mb-12">
@@ -120,31 +145,7 @@ const HomePage = () => {
 
 
             {/* Footer */}
-            <footer className="px-6 py-6 text-center bg-gray-100">
-                <p className="flex justify-center items-center space-x-4 mb-4">
-                    <img src={linkedInIcon} alt="LinkedIn" className="w-6 h-6" />
-                    <img src={fbIcon} alt="Facebook" className="w-6 h-6" />
-                    <img src={twitterIcon} alt="Twitter" className="w-6 h-6" />
-                </p>
-                <p className="text-sm">
-                    <a href="#" className="text-[#FF735C] hover:underline">
-                        About Us
-                    </a>{" "}
-                    |{" "}
-                    <a href="#" className="text-[#FF735C] hover:underline">
-                        Privacy Policy
-                    </a>{" "}
-                    |{" "}
-                    <a href="#" className="text-[#FF735C] hover:underline">
-                        Terms of Service
-                    </a>{" "}
-                    |{" "}
-                    <a href="#" className="text-[#FF735C] hover:underline">
-                        Contact
-                    </a>
-                </p>
-                <p className="text-sm mt-2">© 2024 ResumeBuilderPro. All Rights Reserved.</p>
-            </footer>
+            <Footer />
         </div >
     );
 };

@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
-import backgroundHomeImage from "../assets/home-main.svg";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import Logo from "./Logo";
 
 const Header: React.FC = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -31,26 +32,26 @@ const Header: React.FC = () => {
             <nav className="flex justify-between items-center py-6 px-4 md:px-12 bg-white fixed top-0 left-0 w-full z-10">
                 {/* Logo */}
                 <div className="flex items-center space-x-4">
-                    <h1 className="text-2xl font-bold text-[#FF735C]">ResumeBuilderPro</h1>
+                    <Logo />
                 </div>
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex space-x-8">
-                    <a href="#home" className="font-medium text-gray-600 hover:text-[#FF735C]">
+                    <a href="#home" className="font-medium text-gray-600 hover:text-primary">
                         Home
                     </a>
-                    <a href="#whyus" className="font-medium text-gray-600 hover:text-[#FF735C]">
+                    <a href="#whyus" className="font-medium text-gray-600 hover:text-primary">
                         Why Us
                     </a>
-                    <a href="#howitworks" className="font-medium text-gray-600 hover:text-[#FF735C]">
+                    <a href="#howitworks" className="font-medium text-gray-600 hover:text-primary">
                         How It Works
                     </a>
-                    <a href="#reviews" className="font-medium text-gray-600 hover:text-[#FF735C]">
+                    <a href="#reviews" className="font-medium text-gray-600 hover:text-primary">
                         Reviews
                     </a>
-                    <a href="#account" className="font-medium text-[#FF735C]">
+                    <Link to="/login/" className="font-medium text-primary">
                         My Account
-                    </a>
+                    </Link>
                 </div>
 
                 {/* Mobile Hamburger Menu */}
@@ -91,35 +92,35 @@ const Header: React.FC = () => {
                 <div className="md:hidden absolute left-0 w-full bg-white shadow-md py-4 z-20">
                     <a
                         href="#home"
-                        className="block px-6 py-2 text-gray-800 hover:text-[#FF735C]"
+                        className="block px-6 py-2 text-gray-800 hover:text-primary"
                         onClick={() => setMenuOpen(false)}
                     >
                         Home
                     </a>
                     <a
                         href="#whyus"
-                        className="block px-6 py-2 text-gray-800 hover:text-[#FF735C]"
+                        className="block px-6 py-2 text-gray-800 hover:text-primary"
                         onClick={() => setMenuOpen(false)}
                     >
                         Why Us
                     </a>
                     <a
                         href="#howitworks"
-                        className="block px-6 py-2 text-gray-800 hover:text-[#FF735C]"
+                        className="block px-6 py-2 text-gray-800 hover:text-primary"
                         onClick={() => setMenuOpen(false)}
                     >
                         How It Works
                     </a>
                     <a
                         href="#reviews"
-                        className="block px-6 py-2 text-gray-800 hover:text-[#FF735C]"
+                        className="block px-6 py-2 text-gray-800 hover:text-primary"
                         onClick={() => setMenuOpen(false)}
                     >
                         Reviews
                     </a>
                     <a
                         href="#account"
-                        className="block px-6 py-2 text-[#FF735C]"
+                        className="block px-6 py-2 text-primary "
                         onClick={() => setMenuOpen(false)}
                     >
                         My Account
@@ -127,31 +128,6 @@ const Header: React.FC = () => {
                 </div>
             )}
 
-            {/* Content Section */}
-            <div id="home" className="flex flex-col md:flex-row items-center justify-between px-4 md:px-12 py-1 mt-20">
-                {/* Left Content */}
-                <div className="max-w-xl text-center md:text-left">
-                    <h2 className="text-4xl md:text-4xl font-bold text-gray-600">
-                        Build Resumes That Land Jobs with{" "}<span className="text-[#FF735C] md:text-5xl">AI-Powered</span> Precision
-                    </h2>
-                    <p className="text-base mt-2 text-gray-600">
-                        Create ATS-friendly, customizable resumes tailored to your dream
-                        job—all in minutes.
-                    </p>
-                    <button className="mt-6 px-6 py-2 bg-[#FF735C] text-white font-medium rounded">
-                        Get Started for Free Today!
-                    </button>
-                </div>
-
-                {/* Right Image */}
-                <div className="w-full md:w-1/2 mt-6 md:mt-0">
-                    <img
-                        src={backgroundHomeImage}
-                        alt="Resume Builder"
-                        className="w-full h-auto object-cover"
-                    />
-                </div>
-            </div>
         </header>
     );
 };
