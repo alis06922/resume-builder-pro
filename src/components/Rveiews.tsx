@@ -41,7 +41,7 @@ const Testimonials: React.FC = () => {
     ];
 
     return (
-        <div className="min-w-screen min-h-screen bg-gradient-to-b from-[#F3F4F6] to-white flex items-center justify-center py-16 px-6">
+        <div id="reviews" className="min-w-screen min-h-screen bg-gradient-to-b from-[#F3F4F6] to-white flex items-center justify-center py-16 px-6">
             <div className="w-full max-w-6xl">
                 <div className="text-center mb-12">
                     <h1 className="text-4xl md:text-4xl font-bold mb-5 text-gray-600">

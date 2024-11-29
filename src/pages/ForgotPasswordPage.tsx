@@ -1,15 +1,15 @@
 // import Footer from '../components/Footer';
 import Header from '../components/Header';
-import SignUp from '../components/SignUp';
+import ForgotPassword from '../components/ForgotPassword';
 
-const SignUpPage = () => {
+const ForgotPasswordPage = () => {
     return (
         <div className="bg-gray-50 text-gray-800 font-sans">
             {/* Hero Section */}
             <Header />
 
             {/* Login */}
-            <SignUp />
+            <ForgotPassword />
 
             {/* Footer */}
             {/* <Footer /> */}
@@ -17,4 +17,4 @@ const SignUpPage = () => {
     );
 };
 
-export default SignUpPage;
+export default ForgotPasswordPage;

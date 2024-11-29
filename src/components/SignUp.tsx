@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import githubIcon from '../assets/icons/github.svg'
 import googleIcon from '../assets/icons/google.svg'
 import userAddIcon from '../assets/icons/user-add.svg'
@@ -8,7 +9,7 @@ function SignUp() {
         <>
             <div className="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
                 <div className="mt-12 bg-white shadow sm:rounded-lg flex justify-center flex-1">
-                    <div className="  lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
+                    <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
                         <div className="mt-12 flex flex-col items-center">
                             <h1 className="text-4xl md:text-4xl font-extrabold text-gray-600">
                                 Sign Up
@@ -16,7 +17,7 @@ function SignUp() {
                             <div className="w-full flex-1 mt-8">
                                 <div className="flex flex-col items-center">
                                     <button
-                                        className="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-primary text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline">
+                                        className="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-[#4081EC]  flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline">
                                         <div className="bg-white p-2 rounded-full">
                                             <img src={googleIcon} />
                                         </div>
@@ -26,7 +27,7 @@ function SignUp() {
                                     </button>
 
                                     <button
-                                        className="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-primary text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline mt-5">
+                                        className="w-full max-w-xs font-bold shadow-sm rounded-lg py-3  bg-[#171515] flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline mt-5">
                                         <div className="bg-white p-1 rounded-full">
                                             <img src={githubIcon} />
                                         </div>
@@ -56,6 +57,9 @@ function SignUp() {
                                             Sign Up
                                         </span>
                                     </button>
+                                    <p className='mt-6 text-xs text-gray-600 text-center'>
+                                        Already have an account? <Link to="/login/" className='border-b border-dotted border-gray-500 text-primary'>Log In</Link>
+                                    </p>
                                     <p className="mt-6 text-xs text-gray-600 text-center">
                                         I agree to ResumeBuilderPro {" "}
                                         <a href="#" className="border-b text-primary border-gray-500 border-dotted">
@@ -80,7 +84,7 @@ function SignUp() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     )
 }
