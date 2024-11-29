@@ -8,7 +8,7 @@ const SignUpPage = () => {
             {/* Hero Section */}
             <Header />
 
-            {/* Login */}
+            {/* sign up */}
             <SignUp />
 
             {/* Footer */}

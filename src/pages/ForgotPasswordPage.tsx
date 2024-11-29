@@ -1,6 +1,6 @@
 // import Footer from '../components/Footer';
-import Header from '../components/Header';
 import ForgotPassword from '../components/ForgotPassword';
+import Header from '../components/Header';
 
 const ForgotPasswordPage = () => {
     return (
@@ -8,7 +8,7 @@ const ForgotPasswordPage = () => {
             {/* Hero Section */}
             <Header />
 
-            {/* Login */}
+            {/* forgot password */}
             <ForgotPassword />
 
             {/* Footer */}
