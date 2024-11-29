@@ -1,6 +1,5 @@
 import Sidebar, { SidebarItem } from '../components/Sidebar'
 import { LifeBuoy, Receipt, Boxes, Package, UserCircle, BarChart3, LayoutDashboard, Settings } from "lucide-react"
-import React from 'react'
 
 
 function SideBarPage() {
