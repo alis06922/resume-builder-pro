@@ -1,5 +1,5 @@
 import { MoreVertical, ChevronLast, ChevronFirst } from "lucide-react"
-import { useContext, createContext, useState, ReactNode } from "react"
+import { useContext, createContext, useState, ReactNode, useEffect } from "react"
 import { Link } from "react-router-dom";
 
 
@@ -23,8 +23,25 @@ const SidebarContext = createContext<SidebarContextProps | undefined>(undefined)
 export default function Sidebar({ children }: SidebarProps) {
     const [expanded, setExpanded] = useState(true)
 
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                setExpanded(false);
+            } else {
+                setExpanded(true);
+            }
+        };
+
+        handleResize();
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
     return (
-        <aside className="h-screen">
+        <aside className="h-screen sticky top-0">
             <nav className="h-full flex flex-col bg-white border-r shadow-sm">
                 <div className="p-4 pb-2 flex justify-between items-center">
                     <p className={`overflow-hidden transition-all ${expanded ? "px-3 w-35" : "w-0"}`}>

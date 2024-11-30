@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import githubIcon from '../assets/icons/github.svg'
+// import githubIcon from '../assets/icons/github.svg'
 import googleIcon from '../assets/icons/google.svg'
 import loginBg from '../assets/login-bg.svg'
 
@@ -35,7 +35,7 @@ function ForgotPassword() {
                                 <div className="my-12 border-b text-center">
                                     <div
                                         className="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2">
-                                        Or log in with
+                                        Or
                                     </div>
                                 </div>
                                 <div className="flex flex-col items-center">
@@ -45,11 +45,11 @@ function ForgotPassword() {
                                             <img src={googleIcon} />
                                         </div>
                                         <span className="ml-4 text-white">
-                                            Sign In with Google
+                                            Continue with Google
                                         </span>
                                     </button>
 
-                                    <button
+                                    {/* <button
                                         className="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-[#171515]  flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline mt-5">
                                         <div className="bg-white p-1 rounded-full">
                                             <img src={githubIcon} />
@@ -57,7 +57,7 @@ function ForgotPassword() {
                                         <span className="ml-4 text-white">
                                             Sign In with GitHub
                                         </span>
-                                    </button>
+                                    </button> */}
 
                                 </div>
                             </div>
