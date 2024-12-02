@@ -49,7 +49,7 @@ const LoginPage = () => {
                                     <input
                                         className="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
                                         type="password" placeholder="Password" />
-                                    <Link to="/dashbaord/home/" className="mt-5 tracking-wide font-semibold bg-primary text-gray-100 w-full py-4 rounded-lg transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
+                                    <Link to="/dashbaord/" className="mt-5 tracking-wide font-semibold bg-primary text-gray-100 w-full py-4 rounded-lg transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
                                         <span className="ml-3">
                                             Sign In
                                         </span>
