@@ -8,16 +8,12 @@ import how3 from '../assets/how-3.svg'
 import how4 from '../assets/how-4.svg'
 import searchIcon from '../assets/search.svg'
 import customStyleIcon from '../assets/vector.svg'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
 import Testimonials from '../components/Rveiews'
 
 
 const HomePage = () => {
     return (
         <div className="bg-gray-50 text-gray-800 font-sans">
-            {/* Hero Section */}
-            <Header />
 
             {/* Content Section */}
             <div id="home" className="flex flex-col md:flex-row items-center justify-between px-4 md:px-12 py-1 mt-20">
@@ -142,10 +138,6 @@ const HomePage = () => {
 
             {/* Testimonials Section */}
             <Testimonials />
-
-
-            {/* Footer */}
-            <Footer />
         </div >
     );
 };
