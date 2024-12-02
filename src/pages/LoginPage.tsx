@@ -23,16 +23,6 @@ const LoginPage = () => {
                                             Continue with Google
                                         </span>
                                     </button>
-
-                                    {/* <button
-                                        className=" w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-[#171515] flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline mt-5">
-                                        <div className="bg-white p-1 rounded-full">
-                                            <img src={githubIcon} />
-                                        </div>
-                                        <span className="ml-4 text-white">
-                                            Sign In with GitHub
-                                        </span>
-                                    </button> */}
                                 </div>
 
                                 <div className="my-10 border-b text-center">
