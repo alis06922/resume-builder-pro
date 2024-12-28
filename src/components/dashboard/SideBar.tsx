@@ -1,9 +1,10 @@
 import { LayoutDashboard, History, UserCircle, Settings, HelpCircle, X } from 'lucide-react';
 import { useSidebar } from '../../context/SidebarContext';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export const DashboardSideBar = () => {
     const { isOpen, toggle } = useSidebar();
+    const location = useLocation();
 
     return (
         <>
@@ -37,35 +38,50 @@ export const DashboardSideBar = () => {
                 </div>
 
                 <nav className="space-y-2 flex-1">
-                    <a href="#" className="flex items-center gap-3 px-4 py-2 rounded-lg bg-indigo-50 text-primary">
+                    <Link to="/dashboard/" className={`flex items-center gap-3 px-4 py-2 rounded-lg ${location.pathname === "/dashboard/"
+                        ? "bg-primary-50 text-primary"
+                        : "text-gray-700 hover:bg-gray-100"
+                        }`}>
                         <LayoutDashboard className="w-5 h-5" />
                         <span>Dashboard</span>
-                    </a>
+                    </Link>
 
-                    <a href="#" className="flex items-center gap-3 px-4 py-2 text-gray-700 rounded-lg hover:bg-gray-100">
+                    <Link to="/dashboard/history/" className={`flex items-center gap-3 px-4 py-2 rounded-lg ${location.pathname === "/dashboard/history/"
+                        ? "bg-primary-50 text-primary"
+                        : "text-gray-700 hover:bg-gray-100"
+                        }`}>
                         <History className="w-5 h-5" />
                         <span>History</span>
-                    </a>
+                    </Link>
 
-                    <a href="#" className="flex items-center gap-3 px-4 py-2 text-gray-700 rounded-lg hover:bg-gray-100">
+                    <Link to="/dashboard/profile/" className={`flex items-center gap-3 px-4 py-2 rounded-lg ${location.pathname === "/dashboard/profile/"
+                        ? "bg-primary-50 text-primary"
+                        : "text-gray-700 hover:bg-gray-100"
+                        }`}>
                         <UserCircle className="w-5 h-5" />
                         <span>Profile</span>
-                    </a>
+                    </Link>
 
-                    <a href="#" className="flex items-center gap-3 px-4 py-2 text-gray-700 rounded-lg hover:bg-gray-100">
+                    <Link to="/dashboard/settings/" className={`flex items-center gap-3 px-4 py-2 rounded-lg ${location.pathname === "/dashboard/settings/"
+                        ? "bg-primary-50 text-primary"
+                        : "text-gray-700 hover:bg-gray-100"
+                        }`}>
                         <Settings className="w-5 h-5" />
                         <span>Settings</span>
-                    </a>
+                    </Link>
 
-                    <a href="#" className="flex items-center gap-3 px-4 py-2 text-gray-700 rounded-lg hover:bg-gray-100">
+                    <Link to="/dashboard/help/" className={`flex items-center gap-3 px-4 py-2 rounded-lg ${location.pathname === "/dashboard/help/"
+                        ? "bg-primary-50 text-primary"
+                        : "text-gray-700 hover:bg-gray-100"
+                        }`}>
                         <HelpCircle className="w-5 h-5" />
                         <span>Help</span>
-                    </a>
+                    </Link>
                 </nav>
 
                 {/* Sticky Bottom Help Section */}
                 {/* <div className="mt-auto">
-                    <div className="p-4 bg-indigo-50 rounded-lg">
+                    <div className="p-4 bg-primary-50 rounded-lg">
                         <p className="text-sm text-primary">
                             Need help? Check our documentation or contact support.
                         </p>

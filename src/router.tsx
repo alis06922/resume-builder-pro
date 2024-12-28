@@ -7,6 +7,7 @@ import ErrorPage from "./pages/ErrorPage";
 import Layout from "./pages/Layout";
 import DashLayout from "./pages/dashboard/Layout";
 import Dashboard from "./pages/dashboard/Home"
+import { HistoryPage } from "./pages/dashboard/HistoryPage";
 
 const router = createBrowserRouter([
     {
@@ -21,11 +22,12 @@ const router = createBrowserRouter([
         ]
     },
     {
-        path: '/dashbaord/',
+        path: '/dashboard/',
         element: <DashLayout />,
         errorElement: <ErrorPage />,
         children: [
-            { index: true, element: <Dashboard /> }
+            { index: true, element: <Dashboard /> },
+            { path: 'history/', element: <HistoryPage /> },
         ]
     }
 ])
