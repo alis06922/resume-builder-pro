@@ -1,10 +1,10 @@
 import { DashboardProfileEdit } from "../../components/dashboard/ProfileEdit"
 
-function Dashboard() {
+function CreateResumePage() {
     return (
         <DashboardProfileEdit />
 
     )
 }
 
-export default Dashboard
+export default CreateResumePage

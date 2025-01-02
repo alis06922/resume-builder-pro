@@ -1,4 +1,4 @@
-import { LayoutDashboard, History, UserCircle, Settings, HelpCircle, X } from 'lucide-react';
+import { LayoutDashboard, BadgePlus, History, Settings, HelpCircle, X } from 'lucide-react';
 import { useSidebar } from '../../context/SidebarContext';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -46,6 +46,14 @@ export const DashboardSideBar = () => {
                         <span>Dashboard</span>
                     </Link>
 
+                    <Link to="/dashboard/resume/create/" className={`flex items-center gap-3 px-4 py-2 rounded-lg ${location.pathname === "/dashboard/resume/create/"
+                        ? "bg-primary-50 text-primary"
+                        : "text-gray-700 hover:bg-gray-100"
+                        }`}>
+                        <BadgePlus className="w-5 h-5" />
+                        <span>Create Resume</span>
+                    </Link>
+
                     <Link to="/dashboard/history/" className={`flex items-center gap-3 px-4 py-2 rounded-lg ${location.pathname === "/dashboard/history/"
                         ? "bg-primary-50 text-primary"
                         : "text-gray-700 hover:bg-gray-100"
@@ -54,13 +62,13 @@ export const DashboardSideBar = () => {
                         <span>History</span>
                     </Link>
 
-                    <Link to="/dashboard/profile/" className={`flex items-center gap-3 px-4 py-2 rounded-lg ${location.pathname === "/dashboard/profile/"
+                    {/* <Link to="/dashboard/profile/" className={`flex items-center gap-3 px-4 py-2 rounded-lg ${location.pathname === "/dashboard/profile/"
                         ? "bg-primary-50 text-primary"
                         : "text-gray-700 hover:bg-gray-100"
                         }`}>
                         <UserCircle className="w-5 h-5" />
                         <span>Profile</span>
-                    </Link>
+                    </Link> */}
 
                     <Link to="/dashboard/settings/" className={`flex items-center gap-3 px-4 py-2 rounded-lg ${location.pathname === "/dashboard/settings/"
                         ? "bg-primary-50 text-primary"
